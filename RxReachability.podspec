@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RxReachability'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'RxSwift bindings for Reachability'
 
 
@@ -31,6 +31,6 @@ Pod::Spec.new do |s|
 
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'ReachabilitySwift', '~> 3'
-  s.dependency 'RxSwift', '~> 3.0'
-  s.dependency 'RxCocoa', '~> 3.0'
+  s.dependency 'RxSwift', '~> 3'
+  s.dependency 'RxCocoa', '~> 3'
 end
