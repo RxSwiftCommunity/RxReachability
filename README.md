@@ -22,7 +22,7 @@ RxReachability adds the following RxSwift bindings:
 
 ## Common Usage
 
-1. Be sure to store an instance of `Reachability` in your `ViewController` or similar, and start/stop the notifier on `viewWillAppear` and `viewWillDisappear` methods.
+### 1. Be sure to store an instance of `Reachability` in your `ViewController` or similar, and start/stop the notifier on `viewWillAppear` and `viewWillDisappear` methods.
 
 ```swift
 class ViewController: UIViewController {
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
 
 ```
 
-2. Subscribe to any of the bindings to know when a change happens.
+### 2. Subscribe to any of the bindings to know when a change happens.
 
 ```swift
 extension ViewController {
@@ -91,7 +91,7 @@ extension ViewController {
 
 ## Static Usage
 
-1. Be sure to store an instance of `Reachability` somewhere on your `AppDelegate` or similar, and start the notifier.
+### 1. Be sure to store an instance of `Reachability` somewhere on your `AppDelegate` or similar, and start the notifier.
 
 ```swift
 import ReachabilitySwift
@@ -110,7 +110,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ```
 
-2. Subscribe to any of the bindings to know when a change happens.
+### 2. Subscribe to any of the bindings to know when a change happens.
 
 ```swift
 import ReachabilitySwift
