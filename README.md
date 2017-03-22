@@ -156,6 +156,18 @@ class ViewController: UIViewController {
   }
 ```
 
+## Advanced Usage
+
+With RxReachability you can also add a retry when network comes back up with a given timeout.
+This does require you to have a stored instance of Reachability though.
+
+```swift
+func request(somethingId: Int) -> Observable<Something> {
+  return network.request(.something(somethingId))
+    .retryOnConnect(30)
+    .map { Something(JSON: $0) }
+}
+```
 
 ## Installation
 
