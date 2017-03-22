@@ -3,9 +3,9 @@
 RxReachability
 =========
 
-[![Version](https://img.shields.io/cocoapods/v/MarkdownKit.svg?style=flat)](http://cocoapods.org/pods/MarkdownKit)
-[![License](https://img.shields.io/cocoapods/l/MarkdownKit.svg?style=flat)](http://cocoapods.org/pods/MarkdownKit)
-[![Platform](https://img.shields.io/cocoapods/p/MarkdownKit.svg?style=flat)](http://cocoapods.org/pods/MarkdownKit)
+[![Version](https://img.shields.io/cocoapods/v/RxReachability.svg?style=flat)](http://cocoapods.org/pods/RxReachability)
+[![License](https://img.shields.io/cocoapods/l/RxReachability.svg?style=flat)](http://cocoapods.org/pods/RxReachability)
+[![Platform](https://img.shields.io/cocoapods/p/RxReachability.svg?style=flat)](http://cocoapods.org/pods/RxReachability)
 
 RxReachability adds easy to use RxSwift bindings for [ReachabilitySwift](https://github.com/ashleymills/Reachability.swift).
 You can react to network reachability changes and even retry observables when network comes back up.
@@ -173,4 +173,4 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## License
 
-MarkdownKit is available under the MIT license. See the LICENSE file for more info.
+RxReachability is available under the MIT license. See the LICENSE file for more info.
