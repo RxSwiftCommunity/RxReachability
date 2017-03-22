@@ -164,7 +164,7 @@ This does require you to have a stored instance of Reachability though.
 ```swift
 func request(somethingId: Int) -> Observable<Something> {
   return network.request(.something(somethingId))
-    .retryOnConnect(30)
+    .retryOnConnect(timeout: 30)
     .map { Something(JSON: $0) }
 }
 ```
