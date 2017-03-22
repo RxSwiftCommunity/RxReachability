@@ -11,9 +11,9 @@ import ReachabilitySwift
 import RxCocoa
 import RxSwift
 
-extension ObservableType {
+public extension ObservableType {
 
-  func retryOnConnect(timeout: TimeInterval) -> Observable<E> {
+  public func retryOnConnect(timeout: TimeInterval) -> Observable<E> {
     return retryWhen { _ in
       return Reachability.rx.isConnected
         .timeout(timeout, scheduler: MainScheduler.asyncInstance)
