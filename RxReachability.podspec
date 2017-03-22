@@ -11,11 +11,6 @@ Pod::Spec.new do |s|
   s.version          = '0.1.0'
   s.summary          = 'RxSwift bindings for Reachability'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
   RxReachability adds easy to use RxSwift bindings for [ReachabilitySwift](https://github.com/ashleymills/Reachability.swift).
@@ -29,9 +24,11 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/ivanbruel'
 
   s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.10'
+  s.watchos.deployment_target = '2.0'
+  s.tvos.deployment_target = '9.0'
 
   s.source_files = 'RxReachability/Classes/**/*'
-
 
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'ReachabilitySwift', '~> 3'
