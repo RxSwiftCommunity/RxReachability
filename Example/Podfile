@@ -2,7 +2,6 @@ use_frameworks!
 
 target 'RxReachability_Example' do
   pod 'RxReachability', :path => '../'
-
   target 'RxReachability_Tests' do
     inherit! :search_paths
 

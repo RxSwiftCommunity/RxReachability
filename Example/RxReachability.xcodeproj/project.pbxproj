@@ -28,11 +28,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BC53F7E8CA655E646B8C097 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		0BC53F7E8CA655E646B8C097 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		0DB54D2ED761A600D14404B2 /* Pods-RxReachability_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxReachability_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxReachability_Tests/Pods-RxReachability_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3D72D3FD1F18705D090F30B9 /* Pods-RxReachability_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxReachability_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxReachability_Example/Pods-RxReachability_Example.release.xcconfig"; sourceTree = "<group>"; };
 		4ADB41EEC513E6D293466F5E /* Pods_RxReachability_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxReachability_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		51D64EA5444C33C324662977 /* RxReachability.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = RxReachability.podspec; path = ../RxReachability.podspec; sourceTree = "<group>"; };
+		51D64EA5444C33C324662977 /* RxReachability.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RxReachability.podspec; path = ../RxReachability.podspec; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* RxReachability_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxReachability_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		82B97863CA3047D516FB69FF /* Pods-RxReachability_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxReachability_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxReachability_Example/Pods-RxReachability_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A1D348EFDA3A7DD21154B7A2 /* Pods_RxReachability_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxReachability_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56BFBC9DC33D432A4AEA0C7 /* Pods-RxReachability_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxReachability_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxReachability_Tests/Pods-RxReachability_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		A8981EA78A910FE8BF3A126D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A8981EA78A910FE8BF3A126D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,9 @@
 				6B1785E5CEE090FD01541334 /* Pods */,
 				F89C5F5BB45CB5DC3DCF95CE /* Frameworks */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
