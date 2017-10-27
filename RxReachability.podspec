@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/ivanbruel/RxReachability'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ivanbruel' => 'ivan.bruel@gmail.com' }
-  s.source           = { :git => 'https://github.com/ivanbruel/RxReachability.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/emisvx/RxReachability.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/ivanbruel'
 
   s.ios.deployment_target = '8.0'
