@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ReachabilitySwift
+import Reachability
 import RxCocoa
 import RxSwift
 
@@ -25,9 +25,9 @@ public extension Reactive where Base: Reachability {
     }
   }
 
-  public static var status: Observable<Reachability.NetworkStatus> {
+  public static var status: Observable<Reachability.Connection> {
     return reachabilityChanged
-      .map { $0.currentReachabilityStatus }
+      .map { $0.connection }
   }
 
   public static var isReachable: Observable<Bool> {
@@ -60,9 +60,9 @@ public extension Reactive where Base: Reachability {
     }
   }
 
-  public var status: Observable<Reachability.NetworkStatus> {
+  public var status: Observable<Reachability.Connection> {
     return reachabilityChanged
-      .map { $0.currentReachabilityStatus }
+      .map { $0.connection }
   }
 
   public var isReachable: Observable<Bool> {
