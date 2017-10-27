@@ -16,7 +16,7 @@ extension Reachability: ReactiveCompatible { }
 public extension Reactive where Base: Reachability {
 
   public static var reachabilityChanged: Observable<Reachability> {
-    return NotificationCenter.default.rx.notification(ReachabilityChangedNotification)
+    return NotificationCenter.default.rx.notification(Notification.Name.reachabilityChanged)
       .flatMap { notification -> Observable<Reachability> in
         guard let reachability = notification.object as? Reachability else {
           return .empty()
@@ -51,7 +51,7 @@ public extension Reactive where Base: Reachability {
 public extension Reactive where Base: Reachability {
 
   public var reachabilityChanged: Observable<Reachability> {
-    return NotificationCenter.default.rx.notification(ReachabilityChangedNotification, object: base)
+    return NotificationCenter.default.rx.notification(Notification.Name.reachabilityChanged, object: base)
       .flatMap { notification -> Observable<Reachability> in
         guard let reachability = notification.object as? Reachability else {
           return .empty()
