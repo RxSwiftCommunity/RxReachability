@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ReachabilitySwift
+import Reachability
 import RxSwift
 import RxCocoa
 import RxReachability
@@ -24,8 +24,8 @@ class ViewController: UIViewController {
 
     reachability.rx.isReachable
       .map { "Is reachable: \($0)" }
-      .bindTo(label.rx.text)
-      .addDisposableTo(disposeBag)
+      .bind(to: label.rx.text)
+      .disposed(by: disposeBag)
   }
 
   override func viewWillAppear(_ animated: Bool) {
