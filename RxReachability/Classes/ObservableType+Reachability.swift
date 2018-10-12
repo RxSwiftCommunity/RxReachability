@@ -19,4 +19,43 @@ public extension ObservableType {
         .timeout(timeout, scheduler: MainScheduler.asyncInstance)
     }
   }
+  
+  func retryOnConnect(
+    timeout: TimeInterval,
+    predicate: @escaping (Swift.Error) -> Bool
+  ) -> Observable<E> {
+    return retryWhen {
+      return $0
+        .filter(predicate)
+        .flatMap { _ in
+          Reachability
+            .rx
+            .isConnected
+            .timeout(
+              timeout,
+              scheduler: MainScheduler.asyncInstance
+          )
+        }
+    }
+  }
+  
+  func retryLatestOnConnect(
+    timeout: TimeInterval,
+    predicate: @escaping (Swift.Error) -> Bool
+    ) -> Observable<E> {
+    return retryWhen {
+      return $0
+        .filter(predicate)
+        .flatMapLatest { _ in
+          Reachability
+            .rx
+            .isConnected
+            .timeout(
+              timeout,
+              scheduler: MainScheduler.asyncInstance
+            )
+        }
+    }
+  }
+  
 }
