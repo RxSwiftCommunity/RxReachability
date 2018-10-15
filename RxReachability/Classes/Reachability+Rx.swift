@@ -1,9 +1,8 @@
 //
 //  Reachability+Rx.swift
-//  Unbabel
 //
 //  Created by Ivan Bruel on 22/03/2017.
-//  Copyright © 2017 Unbabel, Inc. All rights reserved.
+//  Copyright (c) RxSwiftCommunity. All rights reserved.
 //
 
 import Foundation

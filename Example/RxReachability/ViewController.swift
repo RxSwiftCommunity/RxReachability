@@ -3,7 +3,7 @@
 //  RxReachability
 //
 //  Created by ivanbruel on 03/22/2017.
-//  Copyright (c) 2017 ivanbruel. All rights reserved.
+//  Copyright (c) RxSwiftCommunity. All rights reserved.
 //
 
 import UIKit

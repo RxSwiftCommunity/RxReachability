@@ -3,6 +3,7 @@
 //  Pods
 //
 //  Created by Ivan Bruel on 22/03/2017.
+//  Copyright (c) RxSwiftCommunity. All rights reserved.
 //
 //
 
