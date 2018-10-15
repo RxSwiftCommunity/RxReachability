@@ -17,19 +17,22 @@ Pod::Spec.new do |s|
   You can react to network reachability changes and even retry observables when network comes back up.
                          DESC
 
-  s.homepage         = 'https://github.com/ivanbruel/RxReachability'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'ivanbruel' => 'ivan.bruel@gmail.com' }
-  s.source           = { :git => 'https://github.com/ivanbruel/RxReachability.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/ivanbruel'
+  s.homepage          = 'https://github.com/RxSwiftCommunity/RxReachability'
+  s.license           = { :type => 'MIT', :file => 'LICENSE' }
+  spec.authors        = { 'Ivan Bruel'        => 'ivan.bruel@gmail.com',
+                          'Bruno Oliveira'    => 'bm.oliveira.dev@gmail.com',
+                          'RxSwiftCommunity'  => 'https://github.com/RxSwiftCommunity' 
+                        }
+  s.source            = { :git => 'https://github.com/RxSwiftCommunity/RxReachability.git', :tag => s.version.to_s }
+  s.social_media_url  = 'https://rxswift.slack.com'
+  s.source_files      = 'RxReachability/Classes/**/*'
+  
+  s.ios.deployment_target   = '8.0'
+  s.osx.deployment_target   = '10.10'
+  s.tvos.deployment_target  = '9.0'
 
-  s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.10'
-  s.tvos.deployment_target = '9.0'
+  s.frameworks = 'Foundation'
 
-  s.source_files = 'RxReachability/Classes/**/*'
-
-  # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'ReachabilitySwift', '~> 4'
   s.dependency 'RxSwift', '~> 4'
   s.dependency 'RxCocoa', '~> 4'
