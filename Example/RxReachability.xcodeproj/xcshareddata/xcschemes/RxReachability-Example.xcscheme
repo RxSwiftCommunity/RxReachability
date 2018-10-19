@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
+               BlueprintIdentifier = "B6C6FA58217A20FC00D037B7"
                BuildableName = "RxReachability_Tests.xctest"
                BlueprintName = "RxReachability_Tests"
                ReferencedContainer = "container:RxReachability.xcodeproj">
@@ -46,11 +46,16 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
+               BlueprintIdentifier = "B6C6FA58217A20FC00D037B7"
                BuildableName = "RxReachability_Tests.xctest"
                BlueprintName = "RxReachability_Tests"
                ReferencedContainer = "container:RxReachability.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "Tests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

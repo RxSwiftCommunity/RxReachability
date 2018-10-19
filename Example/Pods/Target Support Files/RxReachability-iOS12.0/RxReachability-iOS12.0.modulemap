@@ -1,0 +1,6 @@
+framework module RxReachability {
+  umbrella header "RxReachability-iOS12.0-umbrella.h"
+
+  export *
+  module * { export * }
+}
