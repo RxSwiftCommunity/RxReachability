@@ -153,16 +153,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/ReachabilitySwift-iOS8.3/Reachability.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa-iOS8.3/RxCocoa.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/RxReachability-iOS8.3/RxReachability.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/RxSwift-iOS8.3/RxSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxReachability/RxReachability.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/ReachabilitySwift-iOS8.3/Reachability.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa-iOS8.3/RxCocoa.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/RxReachability-iOS8.3/RxReachability.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/RxSwift-iOS8.3/RxSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxReachability/RxReachability.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

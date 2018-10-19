@@ -1,5 +1,5 @@
 framework module RxSwift {
-  umbrella header "RxSwift-iOS12.0-umbrella.h"
+  umbrella header "RxSwift-umbrella.h"
 
   export *
   module * { export * }

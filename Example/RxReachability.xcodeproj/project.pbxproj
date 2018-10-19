@@ -204,7 +204,6 @@
 				B6C6FA55217A20FC00D037B7 /* Sources */,
 				B6C6FA56217A20FC00D037B7 /* Frameworks */,
 				B6C6FA57217A20FC00D037B7 /* Resources */,
-				DF28B5659DAD1F4D3238C3E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,10 +285,10 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RxReachability_Example/Pods-RxReachability_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift-iOS8.3/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS8.3/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxReachability-iOS8.3/RxReachability.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS8.3/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxReachability/RxReachability.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -347,34 +346,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DF28B5659DAD1F4D3238C3E6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RxReachability_Tests/Pods-RxReachability_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift-iOS12.0/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS12.0/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxReachability-iOS12.0/RxReachability.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS12.0/RxSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxReachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxReachability_Tests/Pods-RxReachability_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -1,7 +1,7 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift-iOS8.3" "${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa-iOS8.3" "${PODS_CONFIGURATION_BUILD_DIR}/RxReachability-iOS8.3" "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift-iOS8.3"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift" "${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa" "${PODS_CONFIGURATION_BUILD_DIR}/RxReachability" "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift-iOS8.3/Reachability.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa-iOS8.3/RxCocoa.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/RxReachability-iOS8.3/RxReachability.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift-iOS8.3/RxSwift.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift/Reachability.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa/RxCocoa.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/RxReachability/RxReachability.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift/RxSwift.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
 OTHER_LDFLAGS = $(inherited) -framework "Foundation" -framework "Reachability" -framework "RxCocoa" -framework "RxReachability" -framework "RxSwift" -framework "SystemConfiguration"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
