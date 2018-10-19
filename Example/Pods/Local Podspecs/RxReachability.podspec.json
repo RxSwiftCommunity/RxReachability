@@ -27,7 +27,7 @@
   "frameworks": "Foundation",
   "dependencies": {
     "ReachabilitySwift": [
-      "~> 4"
+      "~> 4.3.0"
     ],
     "RxSwift": [
       "~> 4"

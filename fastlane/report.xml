@@ -5,27 +5,37 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.013178">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.010027">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: Switch to ios test_example lane" time="0.00112">
+      <testcase classname="fastlane.lanes" name="1: Switch to ios test_example lane" time="0.001308">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: bundle install --gemfile=../Example/Gemfile" time="0.462318">
+      <testcase classname="fastlane.lanes" name="2: bundle install --gemfile=../Example/Gemfile" time="0.512038">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: cocoapods" time="3.855301">
+      <testcase classname="fastlane.lanes" name="3: cocoapods" time="3.14576">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: scan" time="54.153679">
+      <testcase classname="fastlane.lanes" name="4: scan" time="30.893455">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="5: Switch to ios pod_lint lane" time="0.001297">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="6: pod_lib_lint" time="36.795645">
         
       </testcase>
     

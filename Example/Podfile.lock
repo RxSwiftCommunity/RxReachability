@@ -3,7 +3,7 @@ PODS:
   - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
   - RxReachability (0.1.5):
-    - ReachabilitySwift (~> 4)
+    - ReachabilitySwift (~> 4.3.0)
     - RxCocoa (~> 4)
     - RxSwift (~> 4)
   - RxSwift (4.3.1)
@@ -24,7 +24,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
-  RxReachability: dae89f864e1aa78ca41ef9e8cbe36ee142d5ce97
+  RxReachability: 00168209cf2ac537b956443106f962bfb69c409a
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
 
 PODFILE CHECKSUM: 2eb32aec6ea42f74f5cbed663f0110a0d5cf4918

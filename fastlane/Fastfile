@@ -31,7 +31,6 @@ platform :ios do
 
   desc "Test the example project"
   private_lane :test_example do  
-    sh("bundle install --gemfile=../Example/Gemfile")
     cocoapods(podfile: "./Example/Podfile")
     scan(workspace: "./Example/RxReachability.xcworkspace",
               scheme: "RxReachability-Example"
