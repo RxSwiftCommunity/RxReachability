@@ -7,7 +7,7 @@ notifications:
 
 # Ensure that fastlane is at the latest version
 before_install:
-- bundle update
+- bundle install
 
 jobs:
   include:
