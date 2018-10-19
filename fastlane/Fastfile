@@ -31,7 +31,10 @@ platform :ios do
 
   desc "Test the example project"
   private_lane :test_example do  
-    cocoapods(podfile: "./Example/Podfile")
+    cocoapods(podfile: "./Example/Podfile",
+              try_repo_update_on_error: true,
+              silent: true
+      )
     scan(workspace: "./Example/RxReachability.xcworkspace",
               scheme: "RxReachability-Example"
             )
