@@ -2,6 +2,6 @@
 <testsuites name='RxReachability_Tests.xctest' tests='2' failures='0'>
   <testsuite name='RxReachability_Tests.RxReachability_Tests' tests='2' failures='0'>
     <testcase classname='RxReachability_Tests.RxReachability_Tests' name='testExample' time='0.001'/>
-    <testcase classname='RxReachability_Tests.RxReachability_Tests' name='testPerformanceExample' time='0.396'/>
+    <testcase classname='RxReachability_Tests.RxReachability_Tests' name='testPerformanceExample' time='0.370'/>
   </testsuite>
 </testsuites>
