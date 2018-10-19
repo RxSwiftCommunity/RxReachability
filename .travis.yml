@@ -1,16 +1,18 @@
-# references:
-# * http://www.objc.io/issue-6/travis-ci.html
-# * https://github.com/supermarin/xcpretty#usage
-
 osx_image: xcode10
 language: objective-c
-xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone XS
 
-# cache: cocoapods
-# podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
-script:
-- set -o pipefail && xcodebuild test -workspace Example/RxReachability.xcworkspace -scheme RxReachability-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint
+notifications:
+  email:
+    - bm.oliveira.dev@gmail.com
+
+# Ensure that fastlane is at the latest version
+before_install:
+- bundle update
+
+jobs:
+  include:
+    - stage: test
+      script: bundle exec fastlane test
+    - stage: deploy
+      if: branch = master
+      script: bundle exec fastlane deploy
