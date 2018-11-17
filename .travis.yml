@@ -12,7 +12,9 @@ before_install:
 jobs:
   include:
     - stage: test
-      script: bundle exec fastlane test
+      script: 
+        - bundle exec fastlane test
     - stage: deploy
-      if: branch = master
-      script: bundle exec fastlane deploy
+      if: tag IS present
+      script: 
+        - bundle exec fastlane deploy
