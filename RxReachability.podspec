@@ -19,10 +19,10 @@ Pod::Spec.new do |s|
 
   s.homepage          = 'https://github.com/bmoliveira/RxReachability'
   s.license           = { :type => 'MIT', :file => 'LICENSE' }
-  s.authors        = { 'Ivan Bruel'        => 'ivan.bruel@gmail.com',
-                          'Bruno Oliveira'    => 'bm.oliveira.dev@gmail.com',
-                          'RxSwiftCommunity'  => 'https://github.com/RxSwiftCommunity' 
-                        }
+  s.authors        = {  'Ivan Bruel'        => 'ivan.bruel@gmail.com',
+                        'Bruno Oliveira'    => 'bm.oliveira.dev@gmail.com',
+                        'RxSwiftCommunity'  => 'https://github.com/RxSwiftCommunity' 
+                      }
   s.source            = { :git => 'https://github.com/bmoliveira/RxReachability.git', :tag => s.version.to_s }
   s.social_media_url  = 'https://rxswift.slack.com'
   s.source_files      = 'RxReachability/Sources/**/*'
