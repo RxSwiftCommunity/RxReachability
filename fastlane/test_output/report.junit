@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites name='RxReachability_Tests.xctest' tests='2' failures='0'>
-  <testsuite name='RxReachability_Tests.RxReachability_Tests' tests='2' failures='0'>
-    <testcase classname='RxReachability_Tests.RxReachability_Tests' name='testExample' time='0.001'/>
-    <testcase classname='RxReachability_Tests.RxReachability_Tests' name='testPerformanceExample' time='0.373'/>
+<testsuites name='RxReachability-Tests.xctest' tests='1' failures='0'>
+  <testsuite name='RxReachability_Tests.RxReachability_Tests' tests='1' failures='0'>
+    <testcase classname='RxReachability_Tests.RxReachability_Tests' name='testExample' time='5.039'/>
   </testsuite>
 </testsuites>

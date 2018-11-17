@@ -16,10 +16,9 @@
 default_platform(:ios)
 
 platform :ios do
-
   desc "Test, lint pod and Build carthage."
   lane :test do
-    test_example
+    test_lib
     pod_lint
     carthage_build
   end
@@ -29,19 +28,47 @@ platform :ios do
     pod_lib_lint(allow_warnings: true)
   end
 
-  desc "Test the example project"
-  private_lane :test_example do  
-    cocoapods(podfile: "./Example/Podfile",
-              try_repo_update_on_error: true,
+  desc "Run the tests"
+  private_lane :test_lib do  
+    scan(workspace: "RxReachability.xcworkspace",
+         scheme: "RxReachability-Example"
+        )
+  end
+
+  desc "Run cocoapods"
+  private_lane :pod_install do
+    cocoapods(podfile: "Podfile",
               silent: true
       )
-    scan(workspace: "./Example/RxReachability.xcworkspace",
-              scheme: "RxReachability-Example"
-            )
   end
 
   desc "Carthage"
   private_lane :carthage_build do
+    carthage(
+      command: "build",
+      use_ssh: false,
+      use_submodules: false,
+      use_binaries: false,
+      no_build: false,
+      no_skip_current: false,
+      verbose: false,
+      platform: "all",
+      configuration: "Release",
+      cache_builds: false,
+      toolchain: "com.apple.dt.toolchain.Swift_4",
+      new_resolver: false,
+      log_path: "carthage.log"
+    )
   end
 
+  desc "Deploy to cocoapods and carthage"
+  lane :deploy do
+    test
+    deploy_pod
+  end
+
+  desc "Deploy to cocoapods"
+  private_lane :deploy_pod do
+    pod_push
+  end
 end
