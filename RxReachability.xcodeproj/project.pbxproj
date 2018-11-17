@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79797EC69612CDD436C81E4F /* Pods_RxReachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6D26CB8485ECB15D31BCD8 /* Pods_RxReachability.framework */; };
+		904E73829BF89B655B6207FD /* Pods_RxReachability_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D000BBD597BE744A00DE8BB /* Pods_RxReachability_Example.framework */; };
 		B60C57EF219F298300D3ABD6 /* RxReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = B60C57ED219F298200D3ABD6 /* RxReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B60C57F9219F29F800D3ABD6 /* ObservableType+Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60C57F7219F29F800D3ABD6 /* ObservableType+Reachability.swift */; };
 		B60C57FA219F29F800D3ABD6 /* Reachability+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60C57F8219F29F800D3ABD6 /* Reachability+Rx.swift */; };
@@ -29,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D000BBD597BE744A00DE8BB /* Pods_RxReachability_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxReachability_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FB4BD1D55A97D1C31DCF3A6 /* Pods-RxReachability-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxReachability-Example.release.xcconfig"; path = "Target Support Files/Pods-RxReachability-Example/Pods-RxReachability-Example.release.xcconfig"; sourceTree = "<group>"; };
+		4718E83743FB755902C0735E /* Pods-RxReachability.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxReachability.debug.xcconfig"; path = "Target Support Files/Pods-RxReachability/Pods-RxReachability.debug.xcconfig"; sourceTree = "<group>"; };
 		B60C57EA219F298200D3ABD6 /* RxReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60C57ED219F298200D3ABD6 /* RxReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxReachability.h; sourceTree = "<group>"; };
 		B60C57EE219F298300D3ABD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +50,9 @@
 		B6C2CF1121A050F2008899EC /* RxReachability-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RxReachability-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C2CF1321A050F2008899EC /* RxReachability_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxReachability_Tests.swift; sourceTree = "<group>"; };
 		B6C2CF1521A050F2008899EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD47C1C9D23E00EF78C2D077 /* Pods-RxReachability.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxReachability.release.xcconfig"; path = "Target Support Files/Pods-RxReachability/Pods-RxReachability.release.xcconfig"; sourceTree = "<group>"; };
+		DE1C83B317EE3AD977559F5F /* Pods-RxReachability-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxReachability-Example.debug.xcconfig"; path = "Target Support Files/Pods-RxReachability-Example/Pods-RxReachability-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		EC6D26CB8485ECB15D31BCD8 /* Pods_RxReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79797EC69612CDD436C81E4F /* Pods_RxReachability.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				904E73829BF89B655B6207FD /* Pods_RxReachability_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,8 +85,21 @@
 		4DD62623FA5823C87446DDF0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				4718E83743FB755902C0735E /* Pods-RxReachability.debug.xcconfig */,
+				BD47C1C9D23E00EF78C2D077 /* Pods-RxReachability.release.xcconfig */,
+				DE1C83B317EE3AD977559F5F /* Pods-RxReachability-Example.debug.xcconfig */,
+				0FB4BD1D55A97D1C31DCF3A6 /* Pods-RxReachability-Example.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		68A04003A7DA2AFD1BC684C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC6D26CB8485ECB15D31BCD8 /* Pods_RxReachability.framework */,
+				0D000BBD597BE744A00DE8BB /* Pods_RxReachability_Example.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B60C57E0219F298200D3ABD6 = {
@@ -87,6 +110,7 @@
 				B6C2CF1221A050F2008899EC /* RxReachability-Tests */,
 				4DD62623FA5823C87446DDF0 /* Pods */,
 				B60C57EB219F298200D3ABD6 /* Products */,
+				68A04003A7DA2AFD1BC684C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,6 +200,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B60C57F2219F298300D3ABD6 /* Build configuration list for PBXNativeTarget "RxReachability" */;
 			buildPhases = (
+				FE10236F22E68C1B3238D61B /* [CP] Check Pods Manifest.lock */,
 				B60C57E5219F298200D3ABD6 /* Headers */,
 				B60C57E6219F298200D3ABD6 /* Sources */,
 				B60C57E7219F298200D3ABD6 /* Frameworks */,
@@ -194,9 +219,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B61F5A7B21A04E94009432B3 /* Build configuration list for PBXNativeTarget "RxReachability-Example" */;
 			buildPhases = (
+				FECC1109D19CE85AFFEBE018 /* [CP] Check Pods Manifest.lock */,
 				B61F5A6821A04E92009432B3 /* Sources */,
 				B61F5A6921A04E92009432B3 /* Frameworks */,
 				B61F5A6A21A04E92009432B3 /* Resources */,
+				C4CE8272317E5B70808C5183 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,6 +322,83 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C4CE8272317E5B70808C5183 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxReachability-Example/Pods-RxReachability-Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxReachability/RxReachability.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxReachability.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxReachability-Example/Pods-RxReachability-Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE10236F22E68C1B3238D61B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxReachability-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FECC1109D19CE85AFFEBE018 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxReachability-Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B60C57E6219F298200D3ABD6 /* Sources */ = {
@@ -481,6 +585,7 @@
 		};
 		B60C57F3219F298300D3ABD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4718E83743FB755902C0735E /* Pods-RxReachability.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -507,6 +612,7 @@
 		};
 		B60C57F4219F298300D3ABD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD47C1C9D23E00EF78C2D077 /* Pods-RxReachability.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -532,6 +638,7 @@
 		};
 		B61F5A7C21A04E94009432B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE1C83B317EE3AD977559F5F /* Pods-RxReachability-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -552,6 +659,7 @@
 		};
 		B61F5A7D21A04E94009432B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FB4BD1D55A97D1C31DCF3A6 /* Pods-RxReachability-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
