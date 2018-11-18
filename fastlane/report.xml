@@ -5,27 +5,27 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.006359">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.031262">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: Switch to ios test_lib lane" time="0.000919">
+      <testcase classname="fastlane.lanes" name="1: Switch to ios test_lib lane" time="0.000891">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: scan" time="31.247431">
+      <testcase classname="fastlane.lanes" name="2: scan" time="37.737546">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: Switch to ios pod_lint lane" time="0.001943">
+      <testcase classname="fastlane.lanes" name="3: Switch to ios pod_lint lane" time="0.001994">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: pod_lib_lint" time="24.840087">
+      <testcase classname="fastlane.lanes" name="4: pod_lib_lint" time="74.242332">
         
       </testcase>
     
