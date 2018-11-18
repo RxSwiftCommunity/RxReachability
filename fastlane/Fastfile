@@ -38,7 +38,6 @@ platform :ios do
   desc "Run cocoapods"
   private_lane :pod_install do
     cocoapods(podfile: "Podfile",
-              repo_update: true,
               silent: true
       )
   end
