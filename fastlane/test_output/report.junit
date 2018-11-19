@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<testsuites name='RxReachability-Tests.xctest' tests='1' failures='0'>
-  <testsuite name='RxReachability_Tests.RxReachability_Tests' tests='1' failures='0'>
-    <testcase classname='RxReachability_Tests.RxReachability_Tests' name='testExample' time='4.341'/>
-  </testsuite>
-</testsuites>

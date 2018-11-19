@@ -20,7 +20,7 @@ platform :ios do
   lane :test do
     test_lib
     pod_lint
-    #carthage_build
+    carthage_build
   end
 
   desc "Cocoapods lint the pod for all platforms"
