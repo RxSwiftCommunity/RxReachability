@@ -1,11 +1,13 @@
-![Logo](https://raw.githubusercontent.com/ivanbruel/RxReachability/master/Assets/Logo.png)
+![Logo](https://raw.githubusercontent.com/RxSwiftCommunity/RxReachability/master/Assets/Logo.png)
 
 RxReachability
 =========
-
+[![GitHub release](https://img.shields.io/github/release/bmoliveira/rxreachability.svg)](https://github.com/bmoliveira/rxreachability/releases)
 [![Version](https://img.shields.io/cocoapods/v/RxReachability.svg?style=flat)](http://cocoapods.org/pods/RxReachability)
 [![License](https://img.shields.io/cocoapods/l/RxReachability.svg?style=flat)](http://cocoapods.org/pods/RxReachability)
 [![Platform](https://img.shields.io/cocoapods/p/RxReachability.svg?style=flat)](http://cocoapods.org/pods/RxReachability)
+[![Build Status](https://travis-ci.org/bmoliveira/RxReachability.svg?branch=master)](https://travis-ci.org/bmoliveira/RxReachability)
+
 
 RxReachability adds easy to use RxSwift bindings for [ReachabilitySwift](https://github.com/ashleymills/Reachability.swift).
 You can react to network reachability changes and even retry observables when network comes back up.
@@ -61,31 +63,31 @@ extension ViewController {
       .subscribe(onNext: { reachability: Reachability in
         print("Reachability changed: \(reachability.currrentReachabilityStatus)")
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     reachability?.rx.status
       .subscribe(onNext: { status: Reachability.NetworkStatus in
         print("Reachability status changed: \(status)")
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     reachability?.rx.isReachable
       .subscribe(onNext: { isReachable: Bool in
         print("Is reachable: \(isReachable)")
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     reachability?.rx.isConnected
       .subscribe(onNext: {
         print("Is connected")
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     reachability?.rx.isDisconnected
       .subscribe(onNext: {
         print("Is disconnected")
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
   }
 ```
 
@@ -94,7 +96,7 @@ extension ViewController {
 #### 1. Be sure to store an instance of `Reachability` somewhere on your `AppDelegate` or similar, and start the notifier.
 
 ```swift
-import ReachabilitySwift
+import Reachability
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -113,7 +115,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 #### 2. Subscribe to any of the bindings to know when a change happens.
 
 ```swift
-import ReachabilitySwift
+import Reachability
 import RxReachability
 import RxSwift
 
@@ -128,31 +130,31 @@ class ViewController: UIViewController {
       .subscribe(onNext: { reachability: Reachability in
         print("Reachability changed: \(reachability.currrentReachabilityStatus)")
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     Reachability.rx.status
       .subscribe(onNext: { status: Reachability.NetworkStatus in
         print("Reachability status changed: \(status)")
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     Reachability.rx.isReachable
       .subscribe(onNext: { isReachable: Bool in
         print("Is reachable: \(isReachable)")
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     Reachability.rx.isConnected
       .subscribe(onNext: {
         print("Is connected")
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
 
     Reachability.rx.isDisconnected
       .subscribe(onNext: {
         print("Is disconnected")
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
   }
 ```
 
@@ -184,5 +186,7 @@ pod 'RxReachability'
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## License
+
+This library belongs to _RxSwiftCommunity_.
 
 RxReachability is available under the MIT license. See the LICENSE file for more info.
