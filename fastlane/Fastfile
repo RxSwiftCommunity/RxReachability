@@ -23,6 +23,18 @@ platform :ios do
     carthage_build
   end
 
+  desc "Deploy to cocoapods and carthage"
+  lane :deploy do
+    test
+    deploy_pod
+  end
+
+  desc "Carthage archive"
+  lane :archive do
+    carthage_build
+    carthage_archive
+  end
+
   desc "Cocoapods lint the pod for all platforms"
   private_lane :pod_lint do
     pod_lib_lint(allow_warnings: true)
@@ -42,7 +54,7 @@ platform :ios do
       )
   end
 
-  desc "Carthage"
+  desc "Carthage Build"
   private_lane :carthage_build do
     carthage(
       command: "build",
@@ -50,7 +62,7 @@ platform :ios do
       use_submodules: false,
       use_binaries: false,
       no_build: false,
-      no_skip_current: false,
+      no_skip_current: true,
       verbose: false,
       platform: "all",
       configuration: "Release",
@@ -61,10 +73,9 @@ platform :ios do
     )
   end
 
-  desc "Deploy to cocoapods and carthage"
-  lane :deploy do
-    test
-    deploy_pod
+  desc "Carthage Archive"
+  private_lane :carthage_archive do
+    carthage(command: "archive")
   end
 
   desc "Deploy to cocoapods"
