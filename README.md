@@ -1,4 +1,4 @@
-![Logo](https://raw.githubusercontent.com/RxSwiftCommunity/RxReachability/master/Assets/Logo.png)
+![Logo](https://raw.githubusercontent.com/bmoliveira/RxReachability/master/Assets/Logo.png)
 
 RxReachability
 =========
