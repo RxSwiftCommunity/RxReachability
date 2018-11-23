@@ -25,7 +25,6 @@ platform :ios do
 
   desc "Deploy to cocoapods and carthage"
   lane :deploy do
-    test
     deploy_pod
   end
 
