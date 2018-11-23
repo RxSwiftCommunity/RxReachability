@@ -59,7 +59,7 @@ platform :ios do
       command: "build",
       use_ssh: false,
       use_submodules: false,
-      use_binaries: false,
+      use_binaries: true,
       no_build: false,
       no_skip_current: true,
       verbose: false,
