@@ -2,7 +2,6 @@
 .DS_Store
 
 # Xcode
-build/
 .build/
 *.pbxuser
 !default.pbxuser
@@ -23,10 +22,7 @@ DerivedData
 # Bundler
 .bundle
 
-Carthage
-
 Pods/
 
 fastlane/test_output
 fastlane/report.xml
-carthage.log
