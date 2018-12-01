@@ -20,7 +20,6 @@ platform :ios do
   lane :test do
     test_lib
     pod_lint
-    carthage_build
   end
 
   desc "Deploy to cocoapods and carthage"
