@@ -22,7 +22,5 @@ DerivedData
 # Bundler
 .bundle
 
-Pods/
-
 fastlane/test_output
 fastlane/report.xml
