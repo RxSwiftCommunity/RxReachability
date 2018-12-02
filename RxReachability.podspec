@@ -16,13 +16,13 @@ Pod::Spec.new do |s|
   You can react to network reachability changes and even retry observables when network comes back up.
                          DESC
 
-  s.homepage          = 'https://github.com/bmoliveira/RxReachability'
+  s.homepage          = 'https://github.com/RxSwiftCommunity/RxReachability'
   s.license           = { :type => 'MIT', :file => 'LICENSE' }
   s.authors        = {  'Ivan Bruel'        => 'ivan.bruel@gmail.com',
                         'Bruno Oliveira'    => 'bm.oliveira.dev@gmail.com',
                         'RxSwiftCommunity'  => 'https://github.com/RxSwiftCommunity' 
                       }
-  s.source            = { :git => 'https://github.com/bmoliveira/RxReachability.git', :tag => s.version.to_s }
+  s.source            = { :git => 'https://github.com/RxSwiftCommunity/RxReachability.git', :tag => s.version.to_s }
   s.social_media_url  = 'https://rxswift.slack.com'
   s.source_files      = 'RxReachability/Sources/**/*'
   
