@@ -1,12 +1,12 @@
-![Logo](https://raw.githubusercontent.com/bmoliveira/RxReachability/master/Assets/Logo.png)
+![Logo](https://raw.githubusercontent.com/RxSwiftCommunity/RxReachability/master/Assets/Logo.png)
 
 RxReachability
 =========
-[![GitHub release](https://img.shields.io/github/release/bmoliveira/rxreachability.svg)](https://github.com/bmoliveira/rxreachability/releases)
+[![GitHub release](https://img.shields.io/github/release/RxSwiftCommunity/rxreachability.svg)](https://github.com/RxSwiftCommunity/rxreachability/releases)
 [![Version](https://img.shields.io/cocoapods/v/RxReachability.svg?style=flat)](http://cocoapods.org/pods/RxReachability)
 [![License](https://img.shields.io/cocoapods/l/RxReachability.svg?style=flat)](http://cocoapods.org/pods/RxReachability)
 [![Platform](https://img.shields.io/cocoapods/p/RxReachability.svg?style=flat)](http://cocoapods.org/pods/RxReachability)
-[![Build Status](https://travis-ci.org/bmoliveira/RxReachability.svg?branch=master)](https://travis-ci.org/bmoliveira/RxReachability)
+[![Build Status](https://travis-ci.org/RxSwiftCommunity/RxReachability.svg?branch=master)](https://travis-ci.org/RxSwiftCommunity/RxReachability)
 
 
 RxReachability adds easy to use RxSwift bindings for [ReachabilitySwift](https://github.com/ashleymills/Reachability.swift).
