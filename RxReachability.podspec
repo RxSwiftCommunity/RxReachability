@@ -8,13 +8,13 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RxReachability'
-  s.version          = '0.1.7'
+  s.version          = '0.1.8'
   s.summary          = 'RxSwift bindings for Reachability'
 
   s.description      = <<-DESC
   RxReachability adds easy to use RxSwift bindings for [ReachabilitySwift](https://github.com/ashleymills/Reachability.swift).
   You can react to network reachability changes and even retry observables when network comes back up.
-                         DESC
+                        DESC
 
   s.homepage          = 'https://github.com/RxSwiftCommunity/RxReachability'
   s.license           = { :type => 'MIT', :file => 'LICENSE' }
