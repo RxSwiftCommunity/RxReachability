@@ -22,8 +22,12 @@ DerivedData
 # Bundler
 .bundle
 
+# Fastlane
 fastlane/test_output
 fastlane/report.xml
+
+# Cocoapods
+Pods/
 
 # Carthage
 #
