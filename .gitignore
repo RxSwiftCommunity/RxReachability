@@ -24,3 +24,9 @@ DerivedData
 
 fastlane/test_output
 fastlane/report.xml
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+Carthage/Build

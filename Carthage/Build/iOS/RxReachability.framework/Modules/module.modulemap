@@ -1,6 +1,0 @@
-framework module RxReachability {
-  umbrella header "RxReachability.h"
-
-  export *
-  module * { export * }
-}
