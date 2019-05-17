@@ -5,9 +5,9 @@ platform :ios, '8.0'
 target 'RxReachability' do
   use_frameworks!
 
-   pod 'ReachabilitySwift', '~> 4.3.0'
-   pod 'RxSwift', '~> 4'
-   pod 'RxCocoa', '~> 4'
+   pod 'ReachabilitySwift', '~> 4.3.1'
+   pod 'RxSwift', '~> 5'
+   pod 'RxCocoa', '~> 5'
 
 end
 
