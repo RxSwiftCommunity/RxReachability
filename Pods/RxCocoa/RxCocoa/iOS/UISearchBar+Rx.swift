@@ -34,9 +34,7 @@ extension Reactive where Base: UISearchBar {
             let didEndEditing = (searchBar?.rx.delegate.methodInvoked(#selector(UISearchBarDelegate.searchBarTextDidEndEditing(_:))) ?? Observable.empty())
             
             return Observable.merge(textDidChange, didEndEditing)
-                    .map { a in
-                        return searchBar?.text ?? ""
-                    }
+                    .map { _ in searchBar?.text ?? "" }
                     .startWith(text)
         }
 
@@ -121,7 +119,18 @@ extension Reactive where Base: UISearchBar {
 		}
 		return ControlEvent(events: source)
 	}
-	
+  
+    /// Installs delegate as forwarding delegate on `delegate`.
+    /// Delegate won't be retained.
+    ///
+    /// It enables using normal delegate mechanism with reactive delegate mechanism.
+    ///
+    /// - parameter delegate: Delegate object.
+    /// - returns: Disposable object that can be used to unbind the delegate.
+    public func setDelegate(_ delegate: UISearchBarDelegate)
+        -> Disposable {
+        return RxSearchBarDelegateProxy.installForwardDelegate(delegate, retainDelegate: false, onProxyForObject: self.base)
+    }
 }
 
 #endif
