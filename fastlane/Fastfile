@@ -34,7 +34,7 @@ platform :ios do
 
   desc "Cocoapods lint the pod for all platforms"
   private_lane :pod_lint do
-    pod_lib_lint(allow_warnings: true)
+    pod_lib_lint
   end
 
   desc "Run the tests"
