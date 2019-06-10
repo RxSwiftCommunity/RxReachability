@@ -32,6 +32,8 @@ Pod::Spec.new do |s|
 
   s.frameworks = 'Foundation'
 
+  s.swift_version    = '5.0'
+
   s.dependency 'ReachabilitySwift', '~> 4.3.1'
   s.dependency 'RxSwift', '~> 5'
   s.dependency 'RxCocoa', '~> 5'
