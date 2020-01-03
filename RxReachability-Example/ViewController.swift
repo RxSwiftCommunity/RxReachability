@@ -16,7 +16,7 @@ class ViewController: UIViewController {
 
   @IBOutlet private weak var label: UILabel!
 
-  let reachability = Reachability()!
+  let reachability = try! Reachability()
   let disposeBag = DisposeBag()
 
   override func viewDidLoad() {
@@ -38,4 +38,3 @@ class ViewController: UIViewController {
     reachability.stopNotifier()
   }
 }
-

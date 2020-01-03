@@ -20,7 +20,7 @@ public extension ObservableType {
         .timeout(timeout, scheduler: MainScheduler.asyncInstance)
     }
   }
-  
+
   func retryOnConnect(
     timeout: DispatchTimeInterval,
     predicate: @escaping (Swift.Error) -> Bool
@@ -39,7 +39,7 @@ public extension ObservableType {
         }
     }
   }
-  
+
   func retryLatestOnConnect(
     timeout: DispatchTimeInterval,
     predicate: @escaping (Swift.Error) -> Bool
@@ -58,5 +58,5 @@ public extension ObservableType {
         }
     }
   }
-  
+
 }
