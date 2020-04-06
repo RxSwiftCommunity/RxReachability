@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RxReachability'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'RxSwift bindings for Reachability'
 
   s.description      = <<-DESC
@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
 
   s.swift_version    = '5.0'
 
-  s.dependency 'ReachabilitySwift', '~> 4.3.1'
+  s.dependency 'ReachabilitySwift', '~> 5.0'
   s.dependency 'RxSwift', '~> 5'
   s.dependency 'RxCocoa', '~> 5'
 end

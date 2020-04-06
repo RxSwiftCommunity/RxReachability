@@ -1,6 +1,6 @@
 {
   "name": "RxReachability",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "summary": "RxSwift bindings for Reachability",
   "description": "RxReachability adds easy to use RxSwift bindings for [ReachabilitySwift](https://github.com/ashleymills/Reachability.swift).\nYou can react to network reachability changes and even retry observables when network comes back up.",
   "homepage": "https://github.com/RxSwiftCommunity/RxReachability",
@@ -15,7 +15,7 @@
   },
   "source": {
     "git": "https://github.com/RxSwiftCommunity/RxReachability.git",
-    "tag": "1.0.0"
+    "tag": "1.1.0"
   },
   "social_media_url": "https://rxswift.slack.com",
   "source_files": "RxReachability/Sources/**/*",
@@ -25,9 +25,10 @@
     "tvos": "9.0"
   },
   "frameworks": "Foundation",
+  "swift_versions": "5.0",
   "dependencies": {
     "ReachabilitySwift": [
-      "~> 4.3.1"
+      "~> 5.0"
     ],
     "RxSwift": [
       "~> 5"
@@ -35,5 +36,6 @@
     "RxCocoa": [
       "~> 5"
     ]
-  }
+  },
+  "swift_version": "5.0"
 }
