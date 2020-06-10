@@ -1,0 +1,43 @@
+PODS:
+  - ReachabilitySwift (5.0.0)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxReachability (1.2.0):
+    - ReachabilitySwift (< 6.0, >= 5.0)
+    - RxCocoa (< 6.0, >= 5.0)
+    - RxSwift (< 6.0, >= 5.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+
+DEPENDENCIES:
+  - RxReachability (from `https://github.com/RxSwiftCommunity/RxReachability.git`, branch `develop`)
+
+SPEC REPOS:
+  trunk:
+    - ReachabilitySwift
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+
+EXTERNAL SOURCES:
+  RxReachability:
+    :branch: develop
+    :git: https://github.com/RxSwiftCommunity/RxReachability.git
+
+CHECKOUT OPTIONS:
+  RxReachability:
+    :commit: 53446b00335ec8959cfdb6b50a306ea08d78f545
+    :git: https://github.com/RxSwiftCommunity/RxReachability.git
+
+SPEC CHECKSUMS:
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxReachability: d83ca6e6fa73abed38e2c5b120a8499521979e10
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+
+PODFILE CHECKSUM: b8c970ead33d2592e11cf8c1df0730a36f9915e3
+
+COCOAPODS: 1.9.1

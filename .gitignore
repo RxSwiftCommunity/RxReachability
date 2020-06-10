@@ -1,4 +1,4 @@
-# OS X
+Open # OS X
 .DS_Store
 
 # Xcode
@@ -30,3 +30,5 @@ Demo/Pods
 .build
 Packages
 Package.pins
+
+Pods
