@@ -1,18 +1,18 @@
 PODS:
-  - ReachabilitySwift (4.3.1)
-  - RxCocoa (5.0.0):
+  - ReachabilitySwift (5.0.0)
+  - RxCocoa (5.0.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
-  - RxReachability (1.0.0):
-    - ReachabilitySwift (~> 4.3.1)
+  - RxReachability (1.1.0):
+    - ReachabilitySwift (~> 5.0)
     - RxCocoa (~> 5)
     - RxSwift (~> 5)
-  - RxRelay (5.0.0):
+  - RxRelay (5.0.1):
     - RxSwift (~> 5)
-  - RxSwift (5.0.0)
+  - RxSwift (5.0.1)
 
 DEPENDENCIES:
-  - ReachabilitySwift (~> 4.3.1)
+  - ReachabilitySwift (~> 5.0)
   - RxCocoa (~> 5)
   - RxReachability (from `.`)
   - RxSwift (~> 5)
@@ -29,12 +29,12 @@ EXTERNAL SOURCES:
     :path: "."
 
 SPEC CHECKSUMS:
-  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
-  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
-  RxReachability: f61218539d155d05d69c9db7edbe81560dc3ac09
-  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
-  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
+  RxReachability: 3da1c23ba6d93dabc004290cda61dd9e7884422d
+  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
+  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
 
-PODFILE CHECKSUM: f897c8d548d02bbfa31252354156a75cc96548db
+PODFILE CHECKSUM: 9f0c361134aae7fe1d858d3d1c05fdd6da8f2999
 
 COCOAPODS: 1.7.1
