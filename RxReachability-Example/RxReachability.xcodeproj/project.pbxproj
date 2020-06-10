@@ -12,7 +12,7 @@
 		0CC2E75124914D3200430B43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC2E74F24914D3200430B43 /* Main.storyboard */; };
 		0CC2E75324914D3300430B43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CC2E75224914D3300430B43 /* Assets.xcassets */; };
 		0CC2E75624914D3300430B43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC2E75424914D3300430B43 /* LaunchScreen.storyboard */; };
-		0CC2E76024915C3B00430B43 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 0CC2E75F24915C3B00430B43 /* Reachability */; };
+		0CC2E76424915DCB00430B43 /* RxReachability in Frameworks */ = {isa = PBXBuildFile; productRef = 0CC2E76324915DCB00430B43 /* RxReachability */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CC2E76024915C3B00430B43 /* Reachability in Frameworks */,
+				0CC2E76424915DCB00430B43 /* RxReachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 			);
 			name = RxReachability;
 			packageProductDependencies = (
-				0CC2E75F24915C3B00430B43 /* Reachability */,
+				0CC2E76324915DCB00430B43 /* RxReachability */,
 			);
 			productName = RxReachability;
 			productReference = 0CC2E74624914D3200430B43 /* RxReachability.app */;
@@ -114,7 +114,7 @@
 			);
 			mainGroup = 0CC2E73D24914D3200430B43;
 			packageReferences = (
-				0CC2E75E24915C3B00430B43 /* XCRemoteSwiftPackageReference "Reachability" */,
+				0CC2E76224915DCB00430B43 /* XCRemoteSwiftPackageReference "RxReachability" */,
 			);
 			productRefGroup = 0CC2E74724914D3200430B43 /* Products */;
 			projectDirPath = "";
@@ -344,21 +344,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0CC2E75E24915C3B00430B43 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+		0CC2E76224915DCB00430B43 /* XCRemoteSwiftPackageReference "RxReachability" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxReachability";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				branch = develop;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0CC2E75F24915C3B00430B43 /* Reachability */ = {
+		0CC2E76324915DCB00430B43 /* RxReachability */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0CC2E75E24915C3B00430B43 /* XCRemoteSwiftPackageReference "Reachability" */;
-			productName = Reachability;
+			package = 0CC2E76224915DCB00430B43 /* XCRemoteSwiftPackageReference "RxReachability" */;
+			productName = RxReachability;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -17,7 +17,11 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/ReactiveX/RxSwift", .upToNextMajor(from: "5.0.0")),
-        .package(url: "https://github.com/ashleymills/Reachability.swift", .upToNextMajor(from: "5.0.0"))
+        .package(
+            name: "Reachability",
+            url: "https://github.com/ashleymills/Reachability.swift",
+            .upToNextMajor(from: "5.0.0")
+        )
     ],
     targets: [
         .target(
