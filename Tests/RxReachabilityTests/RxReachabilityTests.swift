@@ -10,6 +10,6 @@ final class RxReachabilityTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("testExample", testExample)
     ]
 }

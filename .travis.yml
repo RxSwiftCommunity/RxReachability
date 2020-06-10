@@ -2,14 +2,14 @@
 # * https://www.objc.io/issues/6-build-tools/travis-ci/
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode11.3
+osx_image: xcode11.5
 language: objective-c
 
 before_install:
-- gem install swiftlint
-- gem install cocoapods
+- brew install swiftlint
+- brew install cocoapods
 - pod repo update
 
 script:
 - swiftlint
-- cocoapods lib lint --allow-warnings
+- pod lib lint --allow-warnings
