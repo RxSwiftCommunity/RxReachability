@@ -2,7 +2,7 @@
 .DS_Store
 
 # Xcode
-.build/
+build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -11,16 +11,22 @@
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata/
+xcuserdata
 *.xccheckout
 profile
 *.moved-aside
 DerivedData
 *.hmap
-*.ipa
+*.xccheckout
+# AppCode
+.idea/
 
-# Bundler
-.bundle
+Carthage
 
-fastlane/test_output
-fastlane/report.xml
+Demo/Pods
+.ruby-version
+.ruby-gemset
+# Swift Package Manager
+.build
+Packages
+Package.pins

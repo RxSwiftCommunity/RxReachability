@@ -23,7 +23,7 @@ let package = Package(
         .target(
             name: "RxReachability",
             dependencies: [
-                "RxSwift", "ReachabilitySwift",
+                "RxSwift", "Reachability",
                 .product(name: "RxCocoa", package: "RxSwift")
         ]),
         .testTarget(
