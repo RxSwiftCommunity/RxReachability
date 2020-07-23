@@ -22,6 +22,7 @@ Pod::Spec.new do |s|
                         'Joseph Mattiello'  => 'git@joemattiello.com',
                         'Ivan Bruel'        => 'ivan.bruel@gmail.com',
                         'Bruno Oliveira'    => 'bm.oliveira.dev@gmail.com',
+                        'Joe Mattiello'    => 'git@joemattiello.com',
                         'RxSwiftCommunity'  => 'https://github.com/RxSwiftCommunity' 
                       }
   s.source            = { :git => 'https://github.com/RxSwiftCommunity/RxReachability.git', :tag => s.version.to_s }
