@@ -181,6 +181,14 @@ To integrate RxReachability into your Xcode project using CocoaPods, simply add 
 pod 'RxReachability'
 ```
 
+### Installation via Carthage
+
+To integrate RxReachability into your Xcode project using Carthage, simply add the following line to your `Cartfile`:
+
+```ruby
+github 'RxReachability'
+```
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
