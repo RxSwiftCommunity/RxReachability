@@ -189,6 +189,16 @@ To integrate RxReachability into your Xcode project using Carthage, simply add t
 github 'RxReachability'
 ```
 
+### Installation via Swift Package Manager
+
+To integrate RxReachability into your Swift Package Manager project, simply add the following line to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/RxCommunity/RxReachability.git", .upToNextMajor(from: "1.0.0")),
+],
+```
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
