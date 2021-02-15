@@ -94,7 +94,7 @@ Pod::Spec.new do |s|
     s.app_spec 'RxReachabilityExample' do |app_spec|
       app_spec.osx.deployment_target  = '10.10'
       app_spec.ios.deployment_target  = '8.0'
-      app_spec.tvos.deployment_target = '9.0'
+      app_spec.tvos.deployment_target = '10.0'
   
       app_spec.dependency 'ReachabilitySwift', '>= 5.0', '< 6.0'
       app_spec.dependency 'RxSwift', '~> 6'
@@ -129,7 +129,7 @@ Pod::Spec.new do |s|
       test_spec.requires_app_host = false
       test_spec.osx.deployment_target  = '10.10'
       test_spec.ios.deployment_target  = '8.0'
-      test_spec.tvos.deployment_target = '9.0'
+      test_spec.tvos.deployment_target = '10.0'
   
       test_spec.source_files = "Tests/**/*.swift"
       test_spec.exclude_files = "Tests/LinuxMain.swift"
