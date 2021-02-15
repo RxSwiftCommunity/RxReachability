@@ -80,9 +80,9 @@ Pod::Spec.new do |s|
   s.social_media_url  = 'https://rxswift.slack.com'
   s.source_files      = 'Sources/RxReachability/**/*'
   
-  s.ios.deployment_target   = '11.0'
+  s.ios.deployment_target   = '10.0'
   s.osx.deployment_target   = '10.10'
-  s.tvos.deployment_target  = '11.0'
+  s.tvos.deployment_target  = '10.0'
 
   s.swift_version    = '5.2'
 
