@@ -15,13 +15,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-
-      # - name: Danger
-      #   uses: danger/swift@2.0.3
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: GitHub Action for SwiftLint
-        uses: norio-nomura/action-swiftlint@3.1.0
+        uses: norio-nomura/action-swiftlint@3.2.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DIFF_BASE: ${{ github.base_ref }}
