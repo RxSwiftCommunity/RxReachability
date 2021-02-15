@@ -25,6 +25,5 @@ jobs:
       run: swift build -v
     - name: Run tests
       run: swift test --parallel -v
-        env:
-          TEST: 1
-
+      env:
+        TEST: 1
