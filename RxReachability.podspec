@@ -18,7 +18,9 @@ Pod::Spec.new do |s|
 
   s.homepage          = 'https://github.com/RxSwiftCommunity/RxReachability'
   s.license           = { :type => 'MIT', :file => 'LICENSE' }
-  s.authors           = {  'Ivan Bruel'        => 'ivan.bruel@gmail.com',
+  s.authors           = { 
+                        'Joseph Mattiello'  => 'git@joemattiello.com',
+                        'Ivan Bruel'        => 'ivan.bruel@gmail.com',
                         'Bruno Oliveira'    => 'bm.oliveira.dev@gmail.com',
                         'RxSwiftCommunity'  => 'https://github.com/RxSwiftCommunity' 
                       }
@@ -28,7 +30,7 @@ Pod::Spec.new do |s|
   
   s.ios.deployment_target   = '11.0'
   s.osx.deployment_target   = '10.10'
-  s.tvos.deployment_target  = '9.0'
+  s.tvos.deployment_target  = '11.0'
 
   s.swift_version    = '5.2'
 
