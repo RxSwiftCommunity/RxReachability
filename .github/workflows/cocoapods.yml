@@ -15,3 +15,6 @@ jobs:
       with:
         additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.4'
         additional_lint_params: --private
+        workspace: RxReachability_Example.xcworkspace
+        use_modern_build_system: true
+        scheme: RxReachability
