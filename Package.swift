@@ -7,8 +7,8 @@ let package = Package(
     name: "RxReachability",
     platforms: [
         .macOS(.v10_10),
-        .iOS(.v8),
-        .tvOS(.v9)
+        .iOS(.v10),
+        .tvOS(.v10)
     ],
     products: [
         .library(
@@ -21,17 +21,20 @@ let package = Package(
             name: "Reachability",
             url: "https://github.com/ashleymills/Reachability.swift",
             .upToNextMajor(from: "5.1.0")
-        )
+        ),
+
     ],
     targets: [
         .target(
             name: "RxReachability",
             dependencies: [
                 "RxSwift", "Reachability",
-                .product(name: "RxCocoa", package: "RxSwift")
+                .product(name: "RxCocoa", package: "RxSwift"),
+
         ]),
         .testTarget(
             name: "RxReachabilityTests",
-            dependencies: ["RxReachability"])
+            dependencies: ["RxReachability", .product(name: "RxBlocking", package: "RxSwift")
+])
     ]
 )
