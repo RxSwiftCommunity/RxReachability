@@ -1,0 +1,27 @@
+name: Swift PM
+
+on:
+  pull_request:
+    types:
+      - reopened
+      - opened
+      - synchronize
+
+jobs:
+  swift-pm:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - name: Swift Setup
+      uses: YOCKOW/Action-setup-swift@v1.1.4
+      with:
+        swift-version: '5.2.0' # This value is passed to swiftenv without modification.
+    - run: swift --version
+    - name: Resolve
+      run: swift package resolve
+    - name: Build
+      run: swift build -v
+    - name: Run tests
+      run: swift test --parallel -v
