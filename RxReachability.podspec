@@ -87,8 +87,8 @@ Pod::Spec.new do |s|
   s.swift_version    = '5.2'
 
   s.dependency 'ReachabilitySwift', '>= 5.0', '< 6.0'
-  s.dependency 'RxSwift', '>= 5.0', '< 6.0'
-  s.dependency 'RxCocoa', '>= 5.0', '< 6.0'
+  s.dependency 'RxSwift', '~> 6'
+  s.dependency 'RxCocoa', '~> 6'
 
   if PodHelper.supports_app_spec
     s.app_spec 'RxReachabilityExample' do |app_spec|
@@ -135,7 +135,7 @@ Pod::Spec.new do |s|
       test_spec.exclude_files = "Tests/LinuxMain.swift"
 
       test_spec.dependency 'ReachabilitySwift', '>= 5.0', '< 6.0'
-      test_spec.dependency 'RxSwift', '>= 5.0', '< 6.0'
+      test_spec.dependency 'RxSwift', '~> 6'
       test_spec.dependency 'RxBlocking'
 
       if PodHelper.supports_info_plist
