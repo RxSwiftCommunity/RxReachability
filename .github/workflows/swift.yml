@@ -15,9 +15,9 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Swift Setup
-      uses: YOCKOW/Action-setup-swift@v1.1.4
+      uses: YOCKOW/Action-setup-swift@v1.1.10
       with:
-        swift-version: '5.2.0' # This value is passed to swiftenv without modification.
+        swift-version: '5.3' # This value is passed to swiftenv without modification.
     - run: swift --version
     - name: Resolve
       run: swift package resolve
