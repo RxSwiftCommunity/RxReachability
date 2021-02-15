@@ -1,23 +1,15 @@
-osx_image: xcode10.2
+# references:
+# * https://www.objc.io/issues/6-build-tools/travis-ci/
+# * https://github.com/supermarin/xcpretty#usage
+
+osx_image: xcode11.5
 language: objective-c
 
-notifications:
-  email:
-    - bm.oliveira.dev@gmail.com
-
-# Ensure that fastlane is at the latest version
 before_install:
-- brew update
-- brew outdated carthage || brew upgrade carthage
-- bundle install
-- bundle exec pod install --repo-update
+- brew install swiftlint
+- brew install cocoapods
+- pod repo update
 
-jobs:
-  include:
-    - stage: test
-      script: 
-        - bundle exec fastlane test
-    - stage: deploy
-      if: tag IS present
-      script: 
-        - bundle exec fastlane deploy
+script:
+- swiftlint
+- pod lib lint --allow-warnings

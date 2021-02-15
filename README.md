@@ -61,7 +61,7 @@ extension ViewController {
 
     reachability?.rx.reachabilityChanged
       .subscribe(onNext: { reachability: Reachability in
-        print("Reachability changed: \(reachability.currrentReachabilityStatus)")
+        print("Reachability changed: \(reachability.currentReachabilityStatus)")
       })
       .disposed(by: disposeBag)
 
