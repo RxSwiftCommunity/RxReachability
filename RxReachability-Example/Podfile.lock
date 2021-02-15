@@ -17,6 +17,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://cdn.cocoapods.org/:
     - ReachabilitySwift
+    - RxBlocking
     - RxCocoa
     - RxRelay
     - RxSwift

@@ -27,6 +27,9 @@
 		56A76D436C25C1A013CB9DE1 /* Pods-RxReachability_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxReachability_Example.release.xcconfig"; path = "Target Support Files/Pods-RxReachability_Example/Pods-RxReachability_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6385654E3CB5167442094F27 /* Pods-RxReachability.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxReachability.release.xcconfig"; path = "Target Support Files/Pods-RxReachability/Pods-RxReachability.release.xcconfig"; sourceTree = "<group>"; };
 		968ADC5647A82A17737C9C15 /* Pods-RxReachability_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxReachability_Example.debug.xcconfig"; path = "Target Support Files/Pods-RxReachability_Example/Pods-RxReachability_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B345AAFD24C939650014D652 /* RxReachabilityExample.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RxReachabilityExample.xctestplan; sourceTree = "<group>"; };
+		B345AB0424C939D40014D652 /* RxReachability_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxReachability_ExampleTests.swift; sourceTree = "<group>"; };
+		B345AB0624C939D40014D652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4773F0C6ADE5E9074850364 /* Pods_RxReachability_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxReachability_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -46,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				0CC2E74824914D3200430B43 /* RxReachability */,
+				B345AB0324C939D40014D652 /* RxReachability_ExampleTests */,
 				0CC2E74724914D3200430B43 /* Products */,
 				37712D017C7E0D25DECEE9CE /* Pods */,
 				42B4D60E7FC148A238600C99 /* Frameworks */,
@@ -69,6 +73,7 @@
 				0CC2E75224914D3300430B43 /* Assets.xcassets */,
 				0CC2E75424914D3300430B43 /* LaunchScreen.storyboard */,
 				0CC2E75724914D3300430B43 /* Info.plist */,
+				B345AAFD24C939650014D652 /* RxReachabilityExample.xctestplan */,
 			);
 			path = RxReachability;
 			sourceTree = "<group>";
@@ -90,6 +95,15 @@
 				E4773F0C6ADE5E9074850364 /* Pods_RxReachability_Example.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B345AB0324C939D40014D652 /* RxReachability_ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				B345AB0424C939D40014D652 /* RxReachability_ExampleTests.swift */,
+				B345AB0624C939D40014D652 /* Info.plist */,
+			);
+			path = RxReachability_ExampleTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
