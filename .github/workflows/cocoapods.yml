@@ -1,0 +1,17 @@
+on: push
+jobs:
+  test:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Set XCode Version
+      run: sudo xcode-select -s /Applications/Xcode_12.4.app
+    - name: Install Dependencies
+      run: |
+        cd RxReachability-Example
+        pod install --repo-update
+      shell: bash
+    - uses: ty0x2333/cocoapods-action@master
+      with:
+        additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.4'
+        additional_lint_params: --private
