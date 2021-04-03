@@ -20,7 +20,7 @@ let package = Package(
         .package(
             name: "Reachability",
             url: "https://github.com/ashleymills/Reachability.swift",
-            .upToNextMajor(from: "5.0.0")
+            .upToNextMajor(from: "5.1.0")
         )
     ],
     targets: [
