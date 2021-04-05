@@ -29,9 +29,6 @@ let package = Package(
             dependencies: [
                 "RxSwift", "Reachability",
                 .product(name: "RxCocoa", package: "RxSwift")
-        ]),
-        .testTarget(
-            name: "RxReachabilityTests",
-            dependencies: ["RxReachability"])
+        ])
     ]
 )
