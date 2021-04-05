@@ -7,7 +7,7 @@ let package = Package(
     name: "RxReachability",
     platforms: [
         .macOS(.v10_10),
-        .iOS(.v8),
+        .iOS(.v9),
         .tvOS(.v9)
     ],
     products: [
@@ -16,11 +16,11 @@ let package = Package(
             targets: ["RxReachability"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ReactiveX/RxSwift", .upToNextMajor(from: "5.0.0")),
+        .package(url: "https://github.com/ReactiveX/RxSwift", .upToNextMajor(from: "6.0.0")),
         .package(
             name: "Reachability",
             url: "https://github.com/ashleymills/Reachability.swift",
-            .upToNextMajor(from: "5.0.0")
+            .upToNextMajor(from: "5.1.0")
         )
     ],
     targets: [
@@ -29,9 +29,6 @@ let package = Package(
             dependencies: [
                 "RxSwift", "Reachability",
                 .product(name: "RxCocoa", package: "RxSwift")
-        ]),
-        .testTarget(
-            name: "RxReachabilityTests",
-            dependencies: ["RxReachability"])
+        ])
     ]
 )
