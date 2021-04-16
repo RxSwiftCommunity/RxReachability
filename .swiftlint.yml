@@ -16,9 +16,13 @@ opt_in_rules: # some rules are only opt-in
 included: # paths to include during linting. `--path` is ignored if present.
   - Sources
   - Tests
+  - RxReachability-Example
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - Pods
+  - RxReachability-Example/Pods
+  - RxReachability-Example/Carthage
+
 
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level
