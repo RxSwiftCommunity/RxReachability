@@ -39,6 +39,9 @@ docset_icon: Assets/Logo.png
 # ---- Custom Catagories sidebar ----
 
 custom_categories:
-  - name: Rx
+  - name: Observables
     children:
       - Reactive
+  - name: Observable Factories
+    children:
+      - ReachAbility
