@@ -33,3 +33,4 @@ Package.pins
 
 Pods
 .bundle
+*.log
