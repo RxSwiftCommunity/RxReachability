@@ -2,7 +2,8 @@
 # * https://www.objc.io/issues/6-build-tools/travis-ci/
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode11.5
+os: osx
+osx_image: xcode12.2
 language: objective-c
 
 before_install:
@@ -12,4 +13,4 @@ before_install:
 
 script:
 - swiftlint
-- pod lib lint --allow-warnings
+- make pod_lint
