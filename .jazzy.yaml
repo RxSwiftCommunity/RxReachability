@@ -1,15 +1,16 @@
 # ---- About ----
 module: RxReachability
 module_version: 1.2.1
-author: Joseph Mattiello
-author_url: https://joemattiello.dev
+author: RxSwiftCommunity
+author_url: https://community.rxswift.org
 readme: README.md
 copyright: '© 2021 This library belongs to RxSwiftCommunity. RxReachability is available under the MIT license. See the [LICENSE](https://github.com/RxSwiftCommunity/RxReachability/develop/LICENSE.md) file for more info.'
 
 # ---- URLs ----
+root_url: https://rxswiftcommunity.github.io/RxReachability
 github_url: https://github.com/RxSwiftCommunity/RxReachability
 github_file_prefix: https://github.com/RxSwiftCommunity/RxReachabilitytree/version/1.2.1/
-#dash_url: https://RxSwiftCommunity.github.io/RxReachability/docsets/RxReachability.xml
+dash_url: https://rxswiftcommunity.github.io/RxReachability/docsets/RxReachability.xml
 
 # ---- Sources ----
 documentation: docs/reference/**/*.md
@@ -31,7 +32,7 @@ hide_documentation_coverage: false
 skip_undocumented: false
 objc: false
 # swift_version: 5.1
-sdk: iphoneos
+sdk: iphonesimulator
 
 # ---- Unused ----
 docset_icon: Assets/Logo.png
@@ -44,4 +45,5 @@ custom_categories:
       - Reactive
   - name: Observable Factories
     children:
-      - ReachAbility
+      - Reachability
+      - ObservableType

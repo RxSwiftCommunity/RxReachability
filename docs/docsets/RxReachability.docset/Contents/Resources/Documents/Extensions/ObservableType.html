@@ -17,8 +17,9 @@
     <a title="ObservableType Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">RxReachability 1.2.1 Docs</a> (18% documented)</p>
+        <p><a href="../index.html">RxReachability 1.2.1 Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/RxSwiftCommunity/RxReachability"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frxswiftcommunity.github.io%2FRxReachability%2Fdocsets%2FRxReachability.xml"><img src="../img/dash.png"/>Install in Dash</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -37,7 +38,7 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Rx.html">Rx</a>
+            <a href="../Observables.html">Observables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/Reactive.html">Reactive</a>
@@ -45,13 +46,13 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other%20Extensions.html">Other Extensions</a>
+            <a href="../Observable%20Factories.html">Observable Factories</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/ObservableType.html">ObservableType</a>
+                <a href="../Observable%20Factories.html#/s:12ReachabilityAAC">Reachability</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Other%20Extensions.html#/s:12ReachabilityAAC">Reachability</a>
+                <a href="../Extensions/ObservableType.html">ObservableType</a>
               </li>
             </ul>
           </li>
@@ -86,7 +87,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An oberverable to execute retry and execute code on reconnect after a timeout <code>timeout</code></p>
 
                       </div>
                       <div class="declaration">
@@ -97,8 +98,31 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Seconds for timeout</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence with a RxError.timeout in case of a timeout.</p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/RxSwiftCommunity/RxReachabilitytree/version/1.2.1//RxReachability/ObservableType+Reachability.swift#L32-L37">Show on GitHub</a>
+                        <a href="https://github.com/RxSwiftCommunity/RxReachabilitytree/version/1.2.1//RxReachability/ObservableType+Reachability.swift#L35-L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -116,7 +140,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An filtered oberverable to execute retry and execute code on reconnect after a timeout <code>timeout</code></p>
 
                       </div>
                       <div class="declaration">
@@ -130,8 +154,43 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Seconds for timeout</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>predicate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A function to test each source element for a condition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence producing the elements of the given sequence repeatedly until it terminates successfully or is notified to error or complete.</p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/RxSwiftCommunity/RxReachabilitytree/version/1.2.1//RxReachability/ObservableType+Reachability.swift#L39-L56">Show on GitHub</a>
+                        <a href="https://github.com/RxSwiftCommunity/RxReachabilitytree/version/1.2.1//RxReachability/ObservableType+Reachability.swift#L47-L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -149,7 +208,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An filtered oberverable to execute retry and execute code on reconnect after a timeout <code>timeout</code></p>
 
                       </div>
                       <div class="declaration">
@@ -163,8 +222,43 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Seconds for timeout</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>predicate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A function to test each source element for a condition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An observable sequence whose elements are the result of invoking the transform function on each element of source producing an Observable of Observable sequences and that at any point in time produces the elements of the most recent inner observable sequence that has been received.</p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/RxSwiftCommunity/RxReachabilitytree/version/1.2.1//RxReachability/ObservableType+Reachability.swift#L58-L75">Show on GitHub</a>
+                        <a href="https://github.com/RxSwiftCommunity/RxReachabilitytree/version/1.2.1//RxReachability/ObservableType+Reachability.swift#L71-L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
