@@ -7,10 +7,10 @@ readme: README.md
 copyright: '© 2021 This library belongs to RxSwiftCommunity. RxReachability is available under the MIT license. See the [LICENSE](https://github.com/RxSwiftCommunity/RxReachability/develop/LICENSE.md) file for more info.'
 
 # ---- URLs ----
-root_url: https://rxswiftcommunity.github.io/RxReachability
+root_url: https://community.rxswift.org/RxReachability/
 github_url: https://github.com/RxSwiftCommunity/RxReachability
 github_file_prefix: https://github.com/RxSwiftCommunity/RxReachabilitytree/version/1.2.1/
-dash_url: https://rxswiftcommunity.github.io/RxReachability/docsets/RxReachability.xml
+dash_url: https://community.rxswift.org/RxReachability/docsets/RxReachability.xml
 
 # ---- Sources ----
 documentation: docs/reference/**/*.md
