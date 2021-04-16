@@ -51,3 +51,8 @@ spm-docs:
 #> Build via Swift PM
 spm-build:
 	swift build --disable-sandbox -c release
+
+#> Public cocoapod spec
+public-pod:
+	pod trunk register rxwebkit@rxswift.org "RxWebKit Maintainers"
+	pod trunk push RxReachability
