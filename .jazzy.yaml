@@ -1,0 +1,44 @@
+# ---- About ----
+module: RxReachability
+module_version: 1.2.1
+author: Joseph Mattiello
+author_url: https://joemattiello.dev
+readme: README.md
+copyright: '© 2021 This library belongs to RxSwiftCommunity. RxReachability is available under the MIT license. See the [LICENSE](https://github.com/RxSwiftCommunity/RxReachability/develop/LICENSE.md) file for more info.'
+
+# ---- URLs ----
+github_url: https://github.com/RxSwiftCommunity/RxReachability
+github_file_prefix: https://github.com/RxSwiftCommunity/RxReachabilitytree/version/1.2.1/
+#dash_url: https://RxSwiftCommunity.github.io/RxReachability/docsets/RxReachability.xml
+
+# ---- Sources ----
+documentation: docs/reference/**/*.md
+# abstract: documentation/_abstract/*.md
+include: ./**/*.swift
+framework_root: Sources/
+source_directory: Sources/
+podspec: RxReachability.podspec
+
+# ---- Formatting ----
+theme: apple #fullwidth
+
+# ---- Generation ----
+clean: true
+output: docs/
+min_acl: public
+hide_documentation_coverage: false
+# undocumented_text: ""
+skip_undocumented: false
+objc: false
+# swift_version: 5.1
+sdk: iphoneos
+
+# ---- Unused ----
+docset_icon: Assets/Logo.png
+
+# ---- Custom Catagories sidebar ----
+
+custom_categories:
+  - name: Rx
+    children:
+      - Reactive
