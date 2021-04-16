@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
                         DESC
 
   s.homepage          = 'https://github.com/RxSwiftCommunity/RxReachability'
+  s.documentation_url = 'https://community.rxswift.org/RxReachability/'
   s.license           = { :type => 'MIT', :file => 'LICENSE' }
   s.authors           = { 
                         'Joseph Mattiello'  => 'git@joemattiello.com',
@@ -37,4 +38,31 @@ Pod::Spec.new do |s|
   s.dependency 'ReachabilitySwift', '>= 5.0', '< 6.0'
   s.dependency 'RxSwift', '~> 6'
   s.dependency 'RxCocoa', '~> 6'
+
+  s.test_spec do |test_spec|
+    test_spec.test_type = :unit
+    test_spec.requires_app_host = false
+
+    # test_spec.app_host_name = 'RxReachability/RxReachability-Example'
+    # test_spec.dependency 'RxReachability/RxReachability-Example'
+
+    test_spec.source_files = 'Tests/RxReachabilityTests/**/*.swift'
+    test_spec.dependency 'RxBlocking', '~> 6'
+  end
+
+  s.app_spec 'RxReachability-Example' do |app_spec|
+    app_spec.source_files = 'RxReachabilityTests-Example/RxReachabilityTests/**/*.swift'
+    app_spec.ios.deployment_target = '11.0'
+    app_spec.osx.deployment_target = '10.10'
+    app_spec.tvos.deployment_target = '11.0'
+
+    app_spec.info_plist = {
+      'CFBundleIdentifier' => 'org.cocoapods.demo.RxReachability',
+      'UISupportedInterfaceOrientations' => [
+        'UIInterfaceOrientationPortrait',
+      ],
+      'UILaunchStoryboardName' => 'LaunchScreen',
+      'UIMainStoryboardFile' => 'Main',
+    }
+  end
 end
