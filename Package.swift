@@ -29,6 +29,14 @@ let package = Package(
             dependencies: [
                 "RxSwift", "Reachability",
                 .product(name: "RxCocoa", package: "RxSwift")
-        ])
+        ]),
+
+        // MARK: SwiftPM tests
+        .testTarget(
+            name: "RxReachabilityTests",
+            dependencies: [
+            "RxReachability",
+            .product(name: "RxBlocking", package: "RxSwift")
+            ]),
     ]
 )
