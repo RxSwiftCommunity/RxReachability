@@ -18,52 +18,27 @@ final class RxReachabilityTests: XCTestCase {
     }
     
     func test_reachabilityChanged() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-
-//        let reachabilityChanged = try reachability.rx.reachabilityChanged.toBlocking(timeout: 1).first()
-        // TODO: Add observable test
+        let _ = XCTAssertNoThrow(try reachability.rx.reachabilityChanged.toBlocking(timeout: 1).first())
     }
     
     func test_isReachable() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-
         let isReachable = try reachability.rx.isReachable.toBlocking(timeout: 1).first()
         XCTAssertNotNil(isReachable)
         XCTAssertTrue(isReachable!)
     }
     
     func test_status() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        
         let status = try reachability.rx.status.toBlocking(timeout: 1).first()
         XCTAssertNotNil(status)
         XCTAssertNotEqual(status!, .unavailable)
-        }
+    }
     
     func test_isConnected() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        
-//        let isConnected = try reachability.rx.isConnected.toBlocking(timeout: 1).first()
-//        XCTAssertNotNil(isConnected)
-//        XCTAssertTrue(isConnected!)
+        XCTAssertNoThrow(try reachability.rx.isConnected.toBlocking(timeout: 1).first())
     }
     
     func test_isDisconnected() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        
-//        let isDisonnected = try reachability.rx.isDisonnected.toBlocking(timeout: 1).first()
-//        XCTAssertNotNil(isDisonnected)
-//        XCTAssertTrue(isDisonnected!)
+        let _ = reachability.rx.isDisconnected.single()
     }
 
     static var allTests = [
