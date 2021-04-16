@@ -15,7 +15,7 @@ DEPENDENCIES:
   - RxReachability (from `../`)
 
 SPEC REPOS:
-  https://cdn.cocoapods.org/:
+  trunk:
     - ReachabilitySwift
     - RxCocoa
     - RxRelay
@@ -28,7 +28,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
-  RxReachability: 7c63615ebc63e3076a228cf290ae994c8cc8a6bc
+  RxReachability: 68c121933a08bbcc66f7520897ab74bd5d7ee393
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
 
