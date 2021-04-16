@@ -8,6 +8,7 @@ The changelog for `RxReachability`. Also see the [releases](https://github.com/R
 ### Added
 
 - closes #33 Jazzy Docs https://RxSwiftCommunity.gitub.io/RxReachability/
+- closes #34 Added Swift PM unit tests
 - Added this CHANGELOG.md
 
 ### Changed
