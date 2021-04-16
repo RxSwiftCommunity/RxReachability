@@ -29,6 +29,9 @@ import RxSwift
 
 public extension ObservableType {
 
+  /// An oberverable to execute retry and execute code on reconnect after a timeout `timeout`
+  /// - Parameter timeout: Seconds for timeout
+  /// - Returns: An observable sequence with a RxError.timeout in case of a timeout.
   func retryOnConnect(timeout: DispatchTimeInterval) -> Observable<Element> {
     return retry { _ in
       return Reachability.rx.isConnected
@@ -36,6 +39,11 @@ public extension ObservableType {
     }
   }
 
+  /// An filtered oberverable to execute retry and execute code on reconnect after a timeout `timeout`
+  /// - Parameters:
+  ///   - timeout: Seconds for timeout
+  ///   - predicate: A function to test each source element for a condition.
+  /// - Returns: An observable sequence producing the elements of the given sequence repeatedly until it terminates successfully or is notified to error or complete.
   func retryOnConnect(
     timeout: DispatchTimeInterval,
     predicate: @escaping (Swift.Error) -> Bool
@@ -55,6 +63,11 @@ public extension ObservableType {
     }
   }
 
+  /// An filtered oberverable to execute retry and execute code on reconnect after a timeout `timeout`
+  /// - Parameters:
+  ///   - timeout: Seconds for timeout
+  ///   - predicate: A function to test each source element for a condition.
+  /// - Returns: An observable sequence whose elements are the result of invoking the transform function on each element of source producing an Observable of Observable sequences and that at any point in time produces the elements of the most recent inner observable sequence that has been received.
   func retryLatestOnConnect(
     timeout: DispatchTimeInterval,
     predicate: @escaping (Swift.Error) -> Bool
@@ -73,5 +86,4 @@ public extension ObservableType {
         }
     }
   }
-
 }

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RxReachability  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="RxReachability  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">RxReachability 1.2.1 Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/RxSwiftCommunity/RxReachability"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frxswiftcommunity.github.io%2FRxReachability%2Fdocsets%2FRxReachability.xml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">RxReachability Reference</a>
+        <img id="carat" src="img/carat.png" />
+        RxReachability  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Observables.html">Observables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Reactive.html">Reactive</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Observable%20Factories.html">Observable Factories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Observable%20Factories.html#/s:12ReachabilityAAC">Reachability</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/ObservableType.html">ObservableType</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <p><img src="https://raw.githubusercontent.com/RxSwiftCommunity/RxReachability/master/Assets/Logo.png" alt="Logo"></p>
+<h1 id='rxreachability' class='heading'>RxReachability</h1>
+
+<p><a href="https://github.com/RxSwiftCommunity/rxreachability/releases"><img src="https://img.shields.io/github/release/RxSwiftCommunity/rxreachability.svg" alt="GitHub release"></a>
+<a href="http://cocoapods.org/pods/RxReachability"><img src="https://img.shields.io/cocoapods/v/RxReachability.svg?style=flat" alt="Version"></a>
+<a href="http://cocoapods.org/pods/RxReachability"><img src="https://img.shields.io/cocoapods/l/RxReachability.svg?style=flat" alt="License"></a>
+<a href="http://cocoapods.org/pods/RxReachability"><img src="https://img.shields.io/cocoapods/p/RxReachability.svg?style=flat" alt="Platform"></a>
+<a href="https://travis-ci.org/RxSwiftCommunity/RxReachability"><img src="https://travis-ci.org/RxSwiftCommunity/RxReachability.svg?branch=master" alt="Build Status"></a></p>
+
+<p>RxReachability adds easy to use RxSwift bindings for <a href="https://github.com/ashleymills/Reachability.swift">ReachabilitySwift</a>.
+You can react to network reachability changes and even retry observables when network comes back up.</p>
+<h2 id='available-apis' class='heading'>Available APIs</h2>
+
+<p>RxReachability adds the following RxSwift bindings:</p>
+
+<ul>
+<li><code>reachabilityChanged: Observable&lt;Reachability&gt;</code></li>
+<li><code>status: Observable&lt;Reachability.NetworkStatus&gt;</code></li>
+<li><code>isReachable: Observable&lt;Bool&gt;</code></li>
+<li><code>isConnected: Observable&lt;Void&gt;</code></li>
+<li><code>isDisconnected: Observable&lt;Void&gt;</code></li>
+</ul>
+<h2 id='common-usage' class='heading'>Common Usage</h2>
+<h4 id='1-be-sure-to-store-an-instance-of-code-reachability-code-in-your-code-viewcontroller-code-or-similar-and-start-stop-the-notifier-on-code-viewwillappear-code-and-code-viewwilldisappear-code-methods' class='heading'>1. Be sure to store an instance of <code>Reachability</code> in your <code>ViewController</code> or similar, and start/stop the notifier on <code>viewWillAppear</code> and <code>viewWillDisappear</code> methods.</h4>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
+
+  <span class="k">let</span> <span class="nv">disposeBag</span> <span class="o">=</span> <span class="kt">DisposeBag</span><span class="p">()</span>
+  <span class="k">var</span> <span class="nv">reachability</span><span class="p">:</span> <span class="kt">Reachability</span><span class="p">?</span>
+
+  <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+    <span class="n">reachability</span> <span class="o">=</span> <span class="kt">Reachability</span><span class="p">()</span>
+  <span class="p">}</span>
+
+  <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="o">.</span><span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">?</span> <span class="n">reachability</span><span class="p">?</span><span class="o">.</span><span class="nf">startNotifier</span><span class="p">()</span>
+  <span class="p">}</span>
+
+  <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillDisappear</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="o">.</span><span class="nf">viewWillDisappear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+    <span class="n">reachability</span><span class="p">?</span><span class="o">.</span><span class="nf">stopNotifier</span><span class="p">()</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre>
+<h4 id='2-subscribe-to-any-of-the-bindings-to-know-when-a-change-happens' class='heading'>2. Subscribe to any of the bindings to know when a change happens.</h4>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">ViewController</span> <span class="p">{</span>
+
+  <span class="k">let</span> <span class="nv">disposeBag</span> <span class="o">=</span> <span class="kt">DisposeBag</span><span class="p">()</span>
+
+  <span class="kd">func</span> <span class="nf">bindReachability</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="n">reachability</span><span class="p">?</span><span class="o">.</span><span class="n">rx</span><span class="o">.</span><span class="n">reachabilityChanged</span>
+      <span class="o">.</span><span class="nf">subscribe</span><span class="p">(</span><span class="nv">onNext</span><span class="p">:</span> <span class="p">{</span> <span class="nv">reachability</span><span class="p">:</span> <span class="kt">Reachability</span> <span class="k">in</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Reachability changed: </span><span class="se">\(</span><span class="n">reachability</span><span class="o">.</span><span class="n">currentReachabilityStatus</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="o">.</span><span class="nf">disposed</span><span class="p">(</span><span class="nv">by</span><span class="p">:</span> <span class="n">disposeBag</span><span class="p">)</span>
+
+    <span class="n">reachability</span><span class="p">?</span><span class="o">.</span><span class="n">rx</span><span class="o">.</span><span class="n">status</span>
+      <span class="o">.</span><span class="nf">subscribe</span><span class="p">(</span><span class="nv">onNext</span><span class="p">:</span> <span class="p">{</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">Reachability</span><span class="o">.</span><span class="kt">NetworkStatus</span> <span class="k">in</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Reachability status changed: </span><span class="se">\(</span><span class="n">status</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="o">.</span><span class="nf">disposed</span><span class="p">(</span><span class="nv">by</span><span class="p">:</span> <span class="n">disposeBag</span><span class="p">)</span>
+
+    <span class="n">reachability</span><span class="p">?</span><span class="o">.</span><span class="n">rx</span><span class="o">.</span><span class="n">isReachable</span>
+      <span class="o">.</span><span class="nf">subscribe</span><span class="p">(</span><span class="nv">onNext</span><span class="p">:</span> <span class="p">{</span> <span class="nv">isReachable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="k">in</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Is reachable: </span><span class="se">\(</span><span class="n">isReachable</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="o">.</span><span class="nf">disposed</span><span class="p">(</span><span class="nv">by</span><span class="p">:</span> <span class="n">disposeBag</span><span class="p">)</span>
+
+    <span class="n">reachability</span><span class="p">?</span><span class="o">.</span><span class="n">rx</span><span class="o">.</span><span class="n">isConnected</span>
+      <span class="o">.</span><span class="nf">subscribe</span><span class="p">(</span><span class="nv">onNext</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Is connected"</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="o">.</span><span class="nf">disposed</span><span class="p">(</span><span class="nv">by</span><span class="p">:</span> <span class="n">disposeBag</span><span class="p">)</span>
+
+    <span class="n">reachability</span><span class="p">?</span><span class="o">.</span><span class="n">rx</span><span class="o">.</span><span class="n">isDisconnected</span>
+      <span class="o">.</span><span class="nf">subscribe</span><span class="p">(</span><span class="nv">onNext</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Is disconnected"</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="o">.</span><span class="nf">disposed</span><span class="p">(</span><span class="nv">by</span><span class="p">:</span> <span class="n">disposeBag</span><span class="p">)</span>
+  <span class="p">}</span>
+</code></pre>
+<h2 id='static-usage' class='heading'>Static Usage</h2>
+<h4 id='1-be-sure-to-store-an-instance-of-code-reachability-code-somewhere-on-your-code-appdelegate-code-or-similar-and-start-the-notifier' class='heading'>1. Be sure to store an instance of <code>Reachability</code> somewhere on your <code>AppDelegate</code> or similar, and start the notifier.</h4>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Reachability</span>
+
+<span class="kd">@UIApplicationMain</span>
+<span class="kd">class</span> <span class="kt">AppDelegate</span><span class="p">:</span> <span class="kt">UIResponder</span><span class="p">,</span> <span class="kt">UIApplicationDelegate</span> <span class="p">{</span>
+
+  <span class="k">var</span> <span class="nv">reachability</span><span class="p">:</span> <span class="kt">Reachability</span><span class="p">?</span>
+
+  <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+    <span class="n">reachability</span> <span class="o">=</span> <span class="kt">Reachability</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">?</span> <span class="n">reachability</span><span class="p">?</span><span class="o">.</span><span class="nf">startNotifier</span><span class="p">()</span>
+    <span class="k">return</span> <span class="kc">true</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre>
+<h4 id='2-subscribe-to-any-of-the-bindings-to-know-when-a-change-happens' class='heading'>2. Subscribe to any of the bindings to know when a change happens.</h4>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Reachability</span>
+<span class="kd">import</span> <span class="kt">RxReachability</span>
+<span class="kd">import</span> <span class="kt">RxSwift</span>
+
+<span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
+
+  <span class="k">let</span> <span class="nv">disposeBag</span> <span class="o">=</span> <span class="kt">DisposeBag</span><span class="p">()</span>
+
+  <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+    <span class="kt">Reachability</span><span class="o">.</span><span class="n">rx</span><span class="o">.</span><span class="n">reachabilityChanged</span>
+      <span class="o">.</span><span class="nf">subscribe</span><span class="p">(</span><span class="nv">onNext</span><span class="p">:</span> <span class="p">{</span> <span class="nv">reachability</span><span class="p">:</span> <span class="kt">Reachability</span> <span class="k">in</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Reachability changed: </span><span class="se">\(</span><span class="n">reachability</span><span class="o">.</span><span class="n">currrentReachabilityStatus</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="o">.</span><span class="nf">disposed</span><span class="p">(</span><span class="nv">by</span><span class="p">:</span> <span class="n">disposeBag</span><span class="p">)</span>
+
+    <span class="kt">Reachability</span><span class="o">.</span><span class="n">rx</span><span class="o">.</span><span class="n">status</span>
+      <span class="o">.</span><span class="nf">subscribe</span><span class="p">(</span><span class="nv">onNext</span><span class="p">:</span> <span class="p">{</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">Reachability</span><span class="o">.</span><span class="kt">NetworkStatus</span> <span class="k">in</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Reachability status changed: </span><span class="se">\(</span><span class="n">status</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="o">.</span><span class="nf">disposed</span><span class="p">(</span><span class="nv">by</span><span class="p">:</span> <span class="n">disposeBag</span><span class="p">)</span>
+
+    <span class="kt">Reachability</span><span class="o">.</span><span class="n">rx</span><span class="o">.</span><span class="n">isReachable</span>
+      <span class="o">.</span><span class="nf">subscribe</span><span class="p">(</span><span class="nv">onNext</span><span class="p">:</span> <span class="p">{</span> <span class="nv">isReachable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="k">in</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Is reachable: </span><span class="se">\(</span><span class="n">isReachable</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="o">.</span><span class="nf">disposed</span><span class="p">(</span><span class="nv">by</span><span class="p">:</span> <span class="n">disposeBag</span><span class="p">)</span>
+
+    <span class="kt">Reachability</span><span class="o">.</span><span class="n">rx</span><span class="o">.</span><span class="n">isConnected</span>
+      <span class="o">.</span><span class="nf">subscribe</span><span class="p">(</span><span class="nv">onNext</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Is connected"</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="o">.</span><span class="nf">disposed</span><span class="p">(</span><span class="nv">by</span><span class="p">:</span> <span class="n">disposeBag</span><span class="p">)</span>
+
+    <span class="kt">Reachability</span><span class="o">.</span><span class="n">rx</span><span class="o">.</span><span class="n">isDisconnected</span>
+      <span class="o">.</span><span class="nf">subscribe</span><span class="p">(</span><span class="nv">onNext</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Is disconnected"</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="o">.</span><span class="nf">disposed</span><span class="p">(</span><span class="nv">by</span><span class="p">:</span> <span class="n">disposeBag</span><span class="p">)</span>
+  <span class="p">}</span>
+</code></pre>
+<h2 id='advanced-usage' class='heading'>Advanced Usage</h2>
+
+<p>With RxReachability you can also add a retry when network comes back up with a given timeout.
+This does require you to have a stored instance of Reachability though.</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">request</span><span class="p">(</span><span class="nv">somethingId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">Something</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="n">network</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="nf">something</span><span class="p">(</span><span class="n">somethingId</span><span class="p">))</span>
+    <span class="o">.</span><span class="nf">retryOnConnect</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="mi">30</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">map</span> <span class="p">{</span><span class="err"> </span><span class="kt">Something</span><span class="p">(</span><span class="kt">JSON</span><span class="p">:</span> <span class="nv">$0</span><span class="p">)</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='installation-via-cocoapods' class='heading'>Installation via CocoaPods</h3>
+
+<p>To integrate RxReachability into your Xcode project using CocoaPods, simply add the following line to your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'RxReachability'</span><span class="p">,</span> <span class="o">~&gt;</span> <span class="s1">'1.2.1'</span>
+</code></pre>
+<h3 id='installation-via-carthage' class='heading'>Installation via Carthage</h3>
+
+<p>To integrate RxReachability into your Xcode project using CocoaPods, simply add the following line to your <code>Cartfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">github</span> <span class="no">RxSwiftCommunity</span><span class="o">/</span><span class="no">RxReachability</span> <span class="o">~&gt;</span> <span class="mf">1.2</span><span class="o">.</span><span class="mi">1</span>
+</code></pre>
+<h3 id='installation-via-swift-package-manager-spm' class='heading'>Installation via Swift Package Manager (SPM)</h3>
+
+<p>To integrate RxReachability into your Xcode project using SPM, simply add the following line to your <code>Package.swift</code>:</p>
+<pre class="highlight swift"><code><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/RxSwiftCommunity/RxReachability"</span><span class="p">,</span> <span class="o">.</span><span class="nf">upToNextMajor</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"1.2.1"</span><span class="p">)),</span>
+</code></pre>
+<h2 id='example' class='heading'>Example</h2>
+
+<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>This library belongs to <em>RxSwiftCommunity</em>.</p>
+
+<p>RxReachability is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2021 This library belongs to RxSwiftCommunity. RxReachability is available under the MIT license. See the <a class="link" href="https://github.com/RxSwiftCommunity/RxReachability/develop/LICENSE.md" target="_blank" rel="external">LICENSE</a> file for more info.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
