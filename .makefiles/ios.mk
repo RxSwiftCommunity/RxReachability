@@ -10,7 +10,7 @@ SWIFTGEN := $(shell command -v swiftgen 2>/dev/null)
 SWIFTLINT := $(shell command -v swiftlint 2>/dev/null)
 PLATFORM := 'iOS,tvOS,macOS,watchOS'
 
-WORKSPACE := '$(shell ls -d *.xc* | head -1)'
+WORKSPACE := '$(shell ls -d */*.xc* | head -1)'
 
 default: help
 
