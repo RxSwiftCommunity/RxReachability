@@ -7,8 +7,8 @@ let package = Package(
     name: "RxReachability",
     platforms: [
         .macOS(.v10_10),
-        .iOS(.v9),
-        .tvOS(.v9)
+        .iOS(.v11),
+        .tvOS(.v11)
     ],
     products: [
         .library(
