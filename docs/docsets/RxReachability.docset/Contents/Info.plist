@@ -17,6 +17,6 @@
     <key>DashDocSetFamily</key>
       <string>dashtoc</string>
     <key>DashDocSetFallbackURL</key>
-      <string>https://rxswiftcommunity.github.io/RxReachability/</string>
+      <string>https://community.rxswift.org/RxReachability/</string>
   </dict>
 </plist>
