@@ -13,5 +13,5 @@ jobs:
       uses: steven0351/publish-jazzy-docs@v1
       with:
         personal_access_token: ${{ secrets.ACCESS_TOKEN }}
-        config: .jazzy.yml
+        config: .jazzy.yaml
 
