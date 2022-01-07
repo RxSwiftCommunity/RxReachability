@@ -178,7 +178,7 @@ func request(somethingId: Int) -> Observable<Something> {
 To integrate RxReachability into your Xcode project using CocoaPods, simply add the following line to your `Podfile`:
 
 ```ruby
-pod 'RxReachability', ~> '1.2.1'
+pod 'RxReachability', '~> 1.2.1'
 ```
 
 ### Installation via Carthage
@@ -186,7 +186,7 @@ pod 'RxReachability', ~> '1.2.1'
 To integrate RxReachability into your Xcode project using CocoaPods, simply add the following line to your `Cartfile`:
 
 ```ruby
-github RxSwiftCommunity/RxReachability ~> 1.2.1
+github "RxSwiftCommunity/RxReachability" ~> 1.2.1
 ```
 
 ### Installation via Swift Package Manager (SPM)
